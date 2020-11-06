@@ -117,7 +117,7 @@ class Symmetry:
     def __init__(self, random):
         theta = 2*pi*random.random()
         translation_scale = 0.1
-        self.a = Affine(rzero())
+        self.a = Affine(random)
         self.a.Ox = random.signed_expovariate(0, translation_scale)
         self.a.Oy = random.signed_expovariate(0, translation_scale)
         nnn = random.expovariate(1.0/3)
